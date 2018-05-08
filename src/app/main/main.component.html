@@ -1,0 +1,68 @@
+<div>
+
+	<div class="logo-wrapper">
+		<h2>Welcome to <span id="header-text"></span> Rentals!</h2>
+		<span style="font-size: 12px;font-weight: 400;">In order to sign a lease, most landlords will require you to place a one time down payment.  This usually consists of your first month's rent, your last month's rent, a brokerage fee (1 month's rent), and a security deposit (1 month's rent).  Please reach out to one of our agents with any questions and we will be happy to assist you.</span>
+	</div>
+
+	<div style="padding-top: 10px !important;" class="content">
+	  <p>Click a button to view listings :</p>
+	</div>
+	
+
+    <a routerLink="/listings/0" routerLinkActive="active" class="bos-button agent button">
+    	<!-- Studio Listings : {{studioCount}} -->
+    	Studio
+    </a>
+
+    <br/>
+
+    <a routerLink="/listings/1" routerLinkActive="active" class="bos-button agent button">
+		<i class="fa fa-bed" aria-hidden="true"></i>
+    	<!-- 1 Bedroom Listings : {{oneBedroomCount}} -->
+    	1 Bedroom
+    </a>
+
+    <br/>
+
+    <a routerLink="/listings/2" routerLinkActive="active" class="bos-button agent button">
+		<i class="fa fa-bed" aria-hidden="true"></i>
+		<i class="fa fa-bed" aria-hidden="true"></i>
+    	<!-- 2 Bedroom Listings : {{twoBedroomCount}} -->
+    	2 Bedroom
+    </a>
+
+    <br/>
+
+    <a routerLink="/listings/3" routerLinkActive="active" class="bos-button agent button">
+		<i class="fa fa-bed" aria-hidden="true"></i>
+		<i class="fa fa-bed" aria-hidden="true"></i>
+		<i class="fa fa-bed" aria-hidden="true"></i>
+    	<!-- 3 Bedroom Listings : {{threeBedroomCount}} -->
+    	3 Bedroom
+    </a>
+
+    <br/>
+
+    <a routerLink="/listings/4" routerLinkActive="active" class="bos-button agent button">
+		<i class="fa fa-bed" aria-hidden="true"></i>
+		<i class="fa fa-bed" aria-hidden="true"></i>
+		<i class="fa fa-bed" aria-hidden="true"></i>
+		<i class="fa fa-bed" aria-hidden="true"></i>
+		<i class="fa fa-plus" aria-hidden="true"></i>
+    	<!-- 4+ Bedroom Listings : {{fourPlusBedroomCount}} -->
+    	4+ Bedroom
+    </a>
+
+    <br/>
+<!--
+    <a routerLink="/listings/3" routerLinkActive="active" class="bos-button agent button">
+    Actually, I want to buy
+    </a>
+-->
+<!--
+    <a style="background-color: #1F7F91 !important;" routerLink="/listings/3" routerLinkActive="active" class="bos-button agent button">
+    	Other Neighborhoods
+    </a>
+-->
+</div>

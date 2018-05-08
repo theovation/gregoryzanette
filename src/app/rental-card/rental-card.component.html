@@ -1,0 +1,204 @@
+<div class="multifamily">
+<div id={{listing.LIST_NO}} class="list card">
+	<div class="item">
+	<style>
+
+
+	.quarter {
+		width: 25%;
+	}
+	</style>
+		<a (click)="visitListingPage(listing.LIST_NO)" style="cursor: pointer; font-family: 'Playfair Display', serif;
+ font-size: 16px;"><strong>{{listing.STREET_NO}} {{listing.STREET_NAME}}
+
+<span style="" *ngIf="listing.UNIT_NO">
+ Unit # {{listing.UNIT_NO}}
+</span></strong>
+</a>
+
+
+		<h2 style=";font-size: 14px; margin-bottom: 4px;"><span class="city">Boston</span>, MA {{listing.ZIP_CODE}}</h2>
+		<h2 style="font-size: 14px;"><strong>List Price: ${{listing.LIST_PRICE}}</strong></h2>
+		
+
+		<div *ngIf="listing.NO_UNITS">
+			<h2 class="" style="font-size: 14px;">Number of Units : {{listing.NO_UNITS}}</h2>
+		</div>
+
+		<div *ngIf="listing.TOTAL_BRS">
+			<h2 class="" style="font-size: 14px;">Total Bedrooms: <p>{{listing.TOTAL_BRS}}</p></h2>
+		</div>
+
+		<div>
+			<span *ngIf="listing.NO_BEDROOMS" class="bedroomCount roomCount" style="font-size: 14px;">
+			{{listing.NO_BEDROOMS}}
+			Bedrooms
+
+			 |
+			</span>
+			<span *ngIf="listing.SQUARE_FEET" class="" style="font-size: 14px;">{{listing.SQUARE_FEET}} SF<sup>2</sup></span>
+		</div>
+	</div>
+
+<div class="slideshow-container">
+ <!--
+  <div *ngFor="let i of gallery; first as first;" lass="fade mySlides">
+    <div class="numbertext">{{i}} / {{listing.PHOTO_COUNT}}</div>
+	<img style="width: 100%;" src="{{listing.imageSourceOne}}"/>
+  </div>
+  -->
+  <a style="z-index: 1000" class="prev" (click)="prev(listing.LIST_NO)">&#10094;</a>
+  <a style="z-index: 1000" class="next" (click)="next(listing.LIST_NO)">&#10095;</a>
+</div>
+
+<!--
+	<a (click)="open($event, listing.LIST_NO, listing.PHOTO_COUNT)" style="padding: 12px !important; background-color: #546685; color: white; font-size: 14px;
+    height: 45px;" class="item gallery {{listing.LIST_NO}}">Photo Gallery
+	</a>
+-->
+	<a (click)="expand(listing.LIST_NO)" style="align-items: center;justify-content: center; display: flex; height: 45px; background-color: #9fb4d7; color: white;" class="expand-banner contracted">
+		<div class="half">
+			View Details 
+		</div>
+	</a>
+
+
+<div class="expanded">
+	<div class="item">
+		<div *ngIf="listing.TOTAL_UNITS">
+			<h2 style="font-family: 'Josefin Slab', serif;">Total Units : <p> {{listing.TOTAL_UNITS}}</p></h2>
+		</div>
+
+		<div *ngIf="listing.TOTAL_BLDG_SF">
+			<h2 style="font-family: 'Josefin Slab', serif;">Total Building SF : <p> {{listing.TOTAL_BLDG_SF}}</p></h2>
+		</div>
+			
+		<div *ngIf="listing.NO_UNITS">
+			<h2 class="" style="font-family: 'Josefin Slab', serif;">Number of Units : <p> {{listing.NO_UNITS}}</p></h2>
+		</div>
+		
+		<div *ngIf="listing.NO_ROOMS">
+			<h2 class="" style="font-family: 'Josefin Slab', serif;">Total Rooms: <p>{{listing.NO_ROOMS}}</p></h2>
+		</div>
+
+		<div *ngIf="listing.TOTAL_RMS">
+			<h2 class="" style="font-family: 'Josefin Slab', serif;">Total Rooms: <p>{{listing.TOTAL_RMS}}</p></h2>
+		</div>
+
+		<div *ngIf="listing.NO_BEDROOMS">
+			<h2 class="" style="font-family: 'Josefin Slab', serif;">Total Bedrooms: <p>{{listing.NO_BEDROOMS}}</p></h2>
+		</div>
+
+		<div *ngIf="listing.TOTAL_BRS">
+			<h2 class="" style="font-family: 'Josefin Slab', serif;">Total Bedrooms: <p>{{listing.TOTAL_BRS}}</p></h2>
+		</div>
+
+		<div *ngIf="listing.NO_FULL_BATHS">
+			<h2 class="" style="font-family: 'Josefin Slab', serif;">Total Full Bath / Half Bath: <p>{{listing.NO_FULL_BATHS}} / {{listing.NO_HALF_BATHS}}</p></h2>
+		</div>
+
+		<div *ngIf="listing.TOTAL_FULL_BATHS">
+			<h2 class="" style="font-family: 'Josefin Slab', serif;">Full Bath / Half Bath: <p>{{listing.TOTAL_FULL_BATHS}} / {{listing.TOTAL_HALF_BATHS}}</p></h2>
+		</div>
+
+		<div *ngIf="listing.OFU_UNITS">
+			<h2 style="font-family: 'Josefin Slab', serif;">Office Units : <p> {{listing.OFU_UNITS}}</p></h2>
+		</div>
+
+		<div *ngIf="listing.OFF_BLDG_SF">
+			<h2 style="font-family: 'Josefin Slab', serif;">Office Building SF : <p> {{listing.OFF_BLDG_SF}}</p></h2>
+		</div>
+
+		<!--
+		<h2 class="parkingSpace" style="font-family: 'Josefin Slab', serif;">Parking Spaces: <p>
+		{{listing.PARKING_SPACES}}</p></h2>
+		-->
+		<div *ngIf="listing.SQUARE_FEET">
+			<h2 class="" style="font-family: 'Josefin Slab', serif;">Square Feet: <p>{{listing.SQUARE_FEET}}</p></h2>
+		</div>
+
+		<div *ngIf="listing.ACRE">
+			<h2 class="" style="font-family: 'Josefin Slab', serif;">Acre: <p>{{listing.ACRE}}</p></h2>
+		</div>
+
+		<div *ngIf="listing.PARKING_SPACES">
+			<h2 style="font-family: 'Josefin Slab', serif;">Parking Spaces : <p> {{listing.PARKING_SPACES}}</p></h2>
+		</div>
+		<div>
+			<h2 style="font-family: 'Josefin Slab', serif;">
+				MLS ID : <p style="font-size: 14px;">{{listing.LIST_NO}}</p>
+			</h2>
+		</div>
+	</div>
+
+	<span><div style="font-family: 'Josefin Slab', serif;padding: 20px !important;">{{listing.REMARKS}}</div></span>
+
+	<div class="ui left icon input">
+	  <input class="i-name" type="text" placeholder="Name">
+	  <i class="user icon"></i>
+	</div>
+
+	<br/>
+	<br/>
+	
+	<div class="ui left icon input">
+	  <input class="i-number" type="text" placeholder="Phone Number">
+	  <i class="phone icon"></i>
+	</div>
+
+	<br/>
+	<br/>
+
+	<div class="ui left icon input">
+	  <input class="i-email" type="text" placeholder="Email">
+	  <i class="envelope icon"></i>
+	</div>
+
+	<br/>
+	<br/>
+
+	<button  (click)="send(listing.LIST_NO)" style="background-color: #9fb4d7; color: white; width: 90% !important; margin-bottom: 2px; margin-top: 5px;" class="offer button">Send to Agent</button>
+
+	<br/>
+	<br/>
+
+	<p><span class="buyersAgent"></span> of Ovation Properties&#160;&#160;</p>
+
+	<br/>
+	<br/>
+
+	<a href="tel:+19145570460" style="border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: center;">914-557-0460</a>
+
+	<br/>
+	
+	<br/>
+	<p>Listed By : <span class="agentName"></span> of <span class="broker"></span></p>
+
+	<br/>
+	<br/>
+<!--href="/listings/{{listing.LIST_NO}} -->
+<!--  -->
+	<!--<a style="border: 1px solid; padding: 5px;">Share Now</a>-->
+	<!--
+	<a (click)="copyLink(listing.LIST_NO)" style='border: 1px solid #1F7F91; padding: 5px; color: #1F7F91;'>Share now</a>
+	-->
+
+	<a (click)="contract(listing.LIST_NO)" style="align-items: center;justify-content: center; display: flex; height: 45px; background-color: #4c6481; color: white;" class="expand-banner">
+		<div class="quarter">
+			<i class="fa fa-chevron-up" aria-hidden="true"></i>
+		</div>
+		<div class="half">
+			Close Details
+		</div>
+		<div class="quarter">
+			<i class="fa fa-chevron-up" aria-hidden="true"></i>
+		</div>
+	</a>
+	<!--
+	<div style="height: 8px;"></div>
+	-->
+</div>
+
+
+</div>
+</div>

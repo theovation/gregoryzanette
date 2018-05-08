@@ -1,0 +1,252 @@
+<div style="height: 100%;">
+	<br/>
+	<div style="
+		padding-bottom: 0px !important;
+    	padding-top: 10px !important;
+    	margin-bottom: 0px;padding-top: 0px !important;" class="a-183 content">
+	  <!--<h2><span><span id="header-text"></span>Rentals</span></h2>-->
+	  <h3 class="neighborhoodHeaderText" style="color: #3e3e3e;margin-bottom: 5px; font-size: 30px;"><span id="header-text"></span></h3>
+	</div>
+  <style type="text/css">
+@media (min-width: 750px) {
+  .filter-label {
+    text-transform: uppercase;
+    font-family: unset;;
+    font-size: 24px;
+    padding-bottom: 15px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+  }
+  .custom-select {
+    display: flex;
+    flex-flow: column;
+  }
+}
+
+@media (min-width: 600px) {
+    .neighborhoodHeaderText {
+      display: none;
+    }
+    .filter-container {
+      width: 181px;
+      justify-content: center;
+      display: flex;
+      width: auto !important;
+    }
+    .callnow {
+      visibility: hidden;
+    }
+    .custom-select {
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    .custom-select select {
+      text-transform: uppercase;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    #nolistings {
+      display: none;
+    }
+}
+  </style>
+   <!-- <app-back-button></app-back-button> -->
+           <div class="filter-container" style="margin: 0 auto; width: 300px; background-color: white;">
+                  <div id='err' style="padding-top: 15px; ">
+                        <span style="color:red;">Invalid Filter, Showing all listings</span>
+                  </div>
+<style>
+#rooms {
+      padding: 6px !important;
+      float: right;
+      width: 120px;
+}
+
+#maximum {
+      width: 120px;
+      float: right;
+      padding: 6px !important;
+}
+
+#neighborhoods {
+      width: 120px;
+      float: right;
+      padding: 6px !important;
+}
+
+option {
+  text-align: center;
+}
+
+.section-padding {
+    padding: 30px 0px;
+}
+
+.mb-4, .my-4 {
+    margin-bottom: 1.5rem!important;
+}
+
+</style>
+
+
+                  <div class="custom-select" style="padding: 9px;">
+                        <span class="filter-label">Listing Type</span>
+                        <select id="listingtype" style="width: 120px; float: right; padding: 6px !important;">
+                              <option value="forsale">Condos</option>
+                              <option value="lease">Rentals</option>
+                              <option value="singlefamily">Single Family</option>
+                              <option value="multifamily">Multi Family</option>
+                              <option value="commercial">Commercial</option>
+                        </select>
+
+
+                  </div>
+
+                  <div class="custom-select" style="padding: 9px;">
+                        <span class="filter-label">Neighborhoods</span>
+                        <select id='neighborhoods'>
+<!--                              <option value="allston">Allston</option> -->
+                              <option value="backbay">Back Bay</option>
+                              <option value="beaconhill">Beacon Hill</option>
+                              <option value="brighton">Brighton</option>
+                              <option value="charlestown">Charlestown</option>
+                              <option value="chinatown">Chinatown</option>
+                              <option value="downtown">Downtown</option>
+                              <option value="dorchester">Dorchester</option>
+                              <option value="eastboston">East Boston</option>
+                              <option value="fenway">Fenway</option>
+                              <option value="financialdistrict">Financial District</option>
+                              <option value="hydepark">Hyde Park</option>
+                              <option value="jamaicaplain">Jamaica Plain</option>
+                              <option value="kenmore">Kenmore</option>
+                              <option value="missionhill">Mission Hill</option>
+                              <option value="northend">North End</option>
+                              <option value="roslindale">Roslindale</option>
+                              <option value="roxbury">Roxbury</option>
+                              <option value="seaport">Seaport</option>
+                              <option value="southboston">South Boston</option>
+                              <option value="southend">South End</option>
+                              <option value="westend">West End</option>
+                              <option value="westroxbury">West Roxbury</option>
+                              <option value="" disabled>Greater Boston Area</option>
+                              <option value="braintree">Braintree</option>
+                              <option value="brookline">Brookline</option>
+                              <option value="cambridge">Cambridge</option>
+                              <option value="canton">Canton</option>
+                              <option value="chelsea">Chelsea</option>
+                              <option value="cohasset">Cohasset</option>
+                              <option value="concord">Concord</option>
+                              <option value="dedham">Dedham</option>
+                              <option value="everett">Everett</option>
+                              <option value="hingham">Hingham</option>
+                              <option value="hull">Hull</option>
+                              <option value="lexington">Lexington</option>
+                              <option value="lincoln">Lincoln</option>
+                              <option value="marblehead">Marblehead</option>
+                              <option value="milton">Milton</option>
+                              <option value="natick">Natick</option>
+                              <option value="needham">Needham</option>
+                              <option value="newton">Newton</option>
+                              <option value="quincy">Quincy</option>
+                              <option value="revere">Revere</option>
+                              <option value="scituate">Scituate</option>
+                              <option value="somerville">Somerville</option>
+                              <option value="waltham">Waltham</option>
+                              <option value="watertown">Watertown</option>
+                              <option value="wayland">Wayland</option>
+                              <option value="wellesley">Wellesley</option>
+                              <option value="weston">Weston</option>
+                              <option value="westwood">Westwood</option>
+                              <option value="weymouth">Weymouth</option>
+                              <option value="winthrop">Winthrop</option>
+                        </select>
+                  </div>
+
+                  <div class="custom-select" style="padding: 9px;">
+                        <span class="filter-label">Bedrooms</span>
+                        <select id='rooms'>
+                              <option value="none">All</option>
+                              <option value="0">Studio</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                        </select>
+                  </div>
+                  <div class="custom-select" style="padding: 9px;">
+                        <span class="filter-label">Sort By Price</span>
+                        <select id='sort' style="width: 120px;padding: 6px !important; float: right;">
+                              <option value="highToLow">High to Low</option>
+                              <option value="lowToHigh">Low to High</option>
+                        </select>
+                  </div>
+                  <div class="custom-select" style="padding: 9px;">
+                        <span class="filter-label">Maximum Price</span>
+                        <select id='maximum'>
+                              <option value="none">No Limit</option>
+                              <option value="20000">$20,000</option>
+                              <option value="10000">$10,000</option>
+                              <option value="5000">$5,000</option>
+                              <option value="4500">$4,500</option>
+                              <option value="4000">$4,000</option>
+                              <option value="3500">$3,500</option>
+                              <option value="3000">$3,000</option>
+                              <option value="2500">$2,500</option>
+                              <option value="2000">$2,000</option>
+                        </select>
+                  </div>
+
+
+                  <div id="nolistings" class="" style="padding-top: 35px;padding-bottom: 10px; text-align: center;">
+                        <a class="callnow" style="    padding: 6.5px;
+    border: 1px solid #3e3e3e;
+    padding-left: 13px;
+    padding-bottom: 7.5px;
+    padding-right: 8px;font-weight: 700; letter-spacing: 0.3em; font-family: 'Lato'; color: #3e3e3e;font-size: 24px;text-transform: uppercase;" href="tel:+19145570460">Call Now</a>
+                  </div>
+            </div>
+
+      <br class="nolistingsbreak"/>
+
+
+    <div style="background:#eee;justify-content: center; margin: 0 auto; width: 100%; display: flex; flex-wrap: wrap;">
+                  <div id="show" class="sampleContainer">
+                      <div class="loader">
+                          <span class="dot dot_1"></span>
+                          <span class="dot dot_2"></span>
+                          <span class="dot dot_3"></span>
+                          <span class="dot dot_4"></span>
+                      </div>
+                  </div>
+      <div style="max-width: 500px;" *ngFor="let listing of listings">
+          <app-rental-card [listing]="listing"></app-rental-card>
+      </div>
+    </div>
+
+
+
+<section id="listings-footer" class="section-padding">
+         <div class="section-title text-center mb-4">
+         </div>
+         <div class="container">
+            <div class="row">
+               <div style="margin: 0 auto; max-width: 350px; font-family: : 'Lato'" class="col-lg-4 col-md-4">
+                  <div class="agents-card text-center">
+                     <img style="height: 150px; width: 100px;" class="img-fluid mb-4" src="img/agent.jpg">
+                     <p style="font-size: 16px;" class="mb-4">
+                     "Customer satisfaction is our highest priority.  We set the standard for premium service, and we are happy to facilitate all of your real estate releated needs"</p>
+
+                     <h6 style="font-size: 18px; margin-bottom: 0px !important;" class="mb-0 text-success">Gregory Zanette</h6>
+                     <p style="font-size: 16px;margin-bottom: 0px;">Real Estate Broker</p>
+                     <a style="font-size: 16px;" class="mb-4" href="mailto:greg@ovation.properties">greg@ovation.properties</a>
+                     <br/>
+                     <a style="font-size: 16px;" class="mb-4" href="tel:+19145570460">(914) 557-0460</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+  </section>
+</div>

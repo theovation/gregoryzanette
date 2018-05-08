@@ -1,0 +1,169 @@
+<div style="margin-left: auto;
+    margin-right: auto;
+    display: block; width: 100%;">
+<div id={{id}} class="list card">
+	<div class="item">
+	<style>
+	.quarter {
+		width: 25%;
+	}
+
+	</style>
+
+		<h2 style="font-family: 'Playfair Display', serif;font-size: 16px;"><a  href="/listings/{{listing.LIST_NO}}"><strong>{{listing?.STREET_NO}} {{listing?.STREET_NAME}}</strong></a></h2>
+<!--
+		<h2 style=";font-size: 14px; margin-bottom: 4px;"><span class="city">Boston</span>, MA {{listing?.ZIP_CODE}}</h2>
+-->	
+		<h2 style="font-size: 14px;"><strong>List Price: ${{listing?.LIST_PRICE}}</strong></h2>
+		
+
+		<div *ngIf="listing?.NO_UNITS">
+			<h2 class="" style="font-size: 14px;">Number of Units : {{listing?.NO_UNITS}}</h2>
+		</div>
+
+		<div *ngIf="listing?.TOTAL_BRS">
+			<h2 class="" style="font-size: 14px;">Total Bedrooms: <p>{{listing?.TOTAL_BRS}}</p></h2>
+		</div>
+
+		<div *ngIf="listing?.NO_BEDROOMS">
+			<h2 class="bedroomCount roomCount" style="font-size: 14px;">Bedrooms: {{listing?.NO_BEDROOMS}}</h2>
+		</div>
+
+		<div *ngIf="listing?.SQUARE_FEET">
+			<h2 class="" style="font-size: 14px;">Square Feet: {{listing?.SQUARE_FEET}}</h2>
+		</div>
+
+		<h2 style="font-size: 14px;">MLS ID : {{listing?.LIST_NO}}</h2>
+
+	</div>
+	<div style="display: flex; justify-content: center;" class="item item-image">
+		<img style="    width: 100%;
+    vertical-align: middle;display: block; max-width: 375px;" src={{listing?.imageSourceOne}}/>
+		<img style="    width: 100%;
+    vertical-align: middle;display: block; max-width: 375px;" src={{listing?.imageSourceTwo}}/>
+		<img style="    width: 100%;
+    vertical-align: middle;display: block; max-width: 375px;" src={{listing?.imageSourceThree}}/>
+		<img style="    width: 100%;
+    vertical-align: middle;display: block; max-width: 375px;" src={{listing?.imageSourceFour}}/>
+	</div>
+	
+	<br/>
+	<a (click)="open($event, listing?.LIST_NO, listing?.PHOTO_COUNT)" style="padding: 12px !important; background-color: #546685; color: white; font-size: 14px; border-radius: 4px;width: 305px !important;;
+    height: 45px;     min-height: 47px; margin: 0 auto;" class="item gallery {{listing?.LIST_NO}}">Photo Gallery
+	</a>
+	
+
+<div class="expanded">
+	<div class="item">
+
+		<div *ngIf="listing?.TOTAL_UNITS">
+			<h2 style="font-family: 'Josefin Slab', serif;">Total Units : {{listing?.TOTAL_UNITS}}</h2>
+		</div>
+
+		<div *ngIf="listing?.TOTAL_BLDG_SF">
+			<h2 style="font-family: 'Josefin Slab', serif;">Total Building SF : {{listing?.TOTAL_BLDG_SF}}</h2>
+		</div>
+			
+		<div *ngIf="listing?.NO_UNITS">
+			<h2 class="" style="font-family: 'Josefin Slab', serif;">Number of Units : {{listing?.NO_UNITS}}</h2>
+		</div>
+		
+		<div *ngIf="listing?.NO_ROOMS">
+			<h2 class="" style="font-family: 'Josefin Slab', serif;">Total Rooms: {{listing?.NO_ROOMS}}</h2>
+		</div>
+
+		<div *ngIf="listing?.TOTAL_RMS">
+			<h2 class="" style="font-size: 14px;">Total Rooms: {{listing?.TOTAL_RMS}}</h2>
+		</div>
+
+		<div *ngIf="listing?.NO_BEDROOMS">
+			<h2 class="" style="font-family: 'Josefin Slab', serif;">Total Bedrooms: {{listing?.NO_BEDROOMS}}</h2>
+		</div>
+
+		<div *ngIf="listing?.TOTAL_BRS">
+			<h2 class="" style="font-family: 'Josefin Slab', serif;">Total Bedrooms: {{listing?.TOTAL_BRS}}</h2>
+		</div>
+
+		<div *ngIf="listing?.NO_FULL_BATHS">
+			<h2 class="" style="font-family: 'Josefin Slab', serif;">Total Full Bath / Half Bath:{{listing?.NO_FULL_BATHS}} / {{listing?.NO_HALF_BATHS}}</h2>
+		</div>
+
+		<div *ngIf="listing?.TOTAL_FULL_BATHS">
+			<h2 class="" style="font-family: 'Josefin Slab', serif;">Full Bath / Half Bath: {{listing?.TOTAL_FULL_BATHS}} / {{listing?.TOTAL_HALF_BATHS}}</h2>
+		</div>
+
+		<div *ngIf="listing?.OFU_UNITS">
+			<h2 style="font-family: 'Josefin Slab', serif;">Office Units : {{listing?.OFU_UNITS}}</h2>
+		</div>
+
+		<div *ngIf="listing?.OFF_BLDG_SF">
+			<h2 style="font-family: 'Josefin Slab', serif;">Office Building SF : {{listing?.OFF_BLDG_SF}}</h2>
+		</div>
+
+		<!--
+		<h2 class="parkingSpace" style="font-family: 'Josefin Slab', serif;">Parking Spaces: <p>
+		{{listing.PARKING_SPACES}}</p></h2>
+		-->
+		<div *ngIf="listing?.SQUARE_FEET">
+			<h2 class="" style="font-family: 'Josefin Slab', serif;">Square Feet: {{listing?.SQUARE_FEET}}</h2>
+		</div>
+
+		<div *ngIf="listing?.ACRE">
+			<h2 class="" style="font-family: 'Josefin Slab', serif;">Acre: {{listing?.ACRE}}</h2>
+		</div>
+
+		<div *ngIf="listing?.PARKING_SPACES">
+			<h2 style="font-family: 'Josefin Slab', serif;">Parking Spaces : {{listing?.PARKING_SPACES}}</h2>
+		</div>
+	</div>
+
+	<span><div style="font-size: 16px; font-family: 'Josefin Slab', serif;padding: 20px !important;">{{listing?.REMARKS}}</div></span>
+
+	<div class="ui left icon input">
+	  <input class="i-name" type="text" placeholder="Name">
+	  <i class="user icon"></i>
+	</div>
+
+	<br/>
+	<br/>
+	
+	<div class="ui left icon input">
+	  <input class="i-number" type="text" placeholder="Phone Number">
+	  <i class="phone icon"></i>
+	</div>
+
+	<br/>
+	<br/>
+
+	<div class="ui left icon input">
+	  <input class="i-email" type="text" placeholder="Email">
+	  <i class="envelope icon"></i>
+	</div>
+
+	<br/>
+	<br/>
+
+	<button  (click)="send(listing?.LIST_NO)" style="border-radius: 4px; font-size: 14px; min-height: 47px; width: 305px !important; background-color: #1F7F91; color: white; padding: 12px; margin-bottom: 2px; margin-top: 5px;" class="offer button">Send to Agent</button>
+
+	<br/>
+	<br/>
+
+	<p><span class="buyersAgent"></span>Gregory Zanette of Ovation Properties&#160;&#160;</p>
+
+	<a href="tel:+19145570460" style="border-top: 1px solid #eee; border-bottom: 1px solid #eee; text-align: center;">914-557-0460</a>
+
+	<br/>
+	
+	<br/>
+	<p>Listed By : <span class="agentName"></span> of <span class="broker"></span></p>
+
+	<br/>
+
+	<a style="min-height: 47px; border-radius: 4px; font-size: 14px; padding: 13px; background-color: #bfbfbf;" href="/" class="bos-button">Return to Home</a>
+
+	<div style="height: 8px;"></div>
+</div>
+
+
+</div>
+</div>

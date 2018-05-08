@@ -1,0 +1,1880 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<link rel="icon" href="logob_6vX_icon.ico" type="image/x-icon" />
+<script async src="assets/clipboard.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.4/fetch.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.min.js"></script>
+<script async src="assets/textSelect.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117260303-1"></script>
+<script src="https://cdn.rawgit.com/khalidsalomao/simple-query-string/22cc5bbe/src/simplequerystring.min.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-117260303-1');
+</script>
+<script type="text/javascript">
+  // MIT licensed, Written by Abdul Khan and Alexey Novak, 2014
+// version 0.1.3
+var utils=utils||{};!function(){utils.Events=function(){this._init=this._init.bind(this),this._addListener=this._addListener.bind(this),this._generateToken=this._generateToken.bind(this),this.on=this.on.bind(this),this.emit=this.emit.bind(this),this.removeListener=this.removeListener.bind(this),this.removeListeners=this.removeListeners.bind(this),this._init()},utils.Events.prototype={_init:function(){this._queues={}},_generateToken:function(){var e=function(){return Math.floor(65536*(1+Math.random())).toString(16).substring(1)};return e()+e()+"-"+e()+"-"+e()+"-"+e()+"-"+e()+e()+e()},_addListener:function(e,t,i){if("string"!=typeof e||""===e||"function"!=typeof t)throw"Event.js: incorrect input parameters";this._queues[e]||(this._queues[e]=[]);var n=this._generateToken();return this._queues[e].push({callback:t,once:i,increment:0,token:n}),{token:n,remove:function(){this.removeListener(e,n)}.bind(this)}},on:function(e,t){return this._addListener(e,t,!1)},once:function(e,t){return this._addListener(e,t,!0)},emit:function(e,t){if(this._queues[e]&&this._queues[e].length){t=t instanceof Array?t:[t];for(var i=this._queues[e],n=i.slice(),s=i.length,r=0;s>r;r++){var u=n[r];u.once&&i.splice(r,1),"function"==typeof u.callback&&(u.callback.apply(void 0,t||[]),u.increment++)}i.length||delete this._queues[e]}},removeListener:function(e,t){if(this._queues[e]&&this._queues[e].length){for(var i=this._queues[e],n=i.length,s=0;n>s;s++)if(i[s].token===t){i.splice(s,1),n--;break}i.length||delete this._queues[e]}},removeListeners:function(e){delete this._queues[e]},_queues:null}}();
+</script>
+
+<link href="design.css" rel="stylesheet">
+<link href="index.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="assets/jquery.autocomplete.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="assets/jquery.autocomplete.js"></script>
+<script type="text/javascript">
+
+setTimeout(function(){
+    if(window.queryParameters) {
+      window.queryKeys = simpleQueryString.parse(window.queryParameters);
+    } else {
+      window.queryKeys = simpleQueryString.parse(window.location.search);
+    }
+
+    var listingCount = 1;
+    var neighborhood = 'backbay';
+    var listingtype = 'forsale';
+
+
+    if($("#neighborhoods").val() !== "backbay") {
+      window.neighborhoodCode = $("#neighborhoods").val();
+    }
+      
+    if(window.queryKeys.neighborhoods) {
+      window.queryKeys.neighborhood = window.queryKeys.neighborhoods;
+    }
+
+    if(window.queryKeys.neighborhood) {
+      $("#neighborhoods").val(window.queryKeys.neighborhood);
+    } else {
+      //neighborhood = 'backbay'
+      //window.queryKeys.neighborhood = neighborhood;
+      //$("#neighborhoods").val('Back Bay');
+    } 
+
+    if(window.queryKeys.listingtype) {
+      $("#listingtype").val(window.queryKeys.listingtype);
+    }
+}, 500);
+
+setTimeout(function(){
+    if(window.queryParameters) {
+      window.queryKeys = simpleQueryString.parse(window.queryParameters);
+    } else {
+      window.queryKeys = simpleQueryString.parse(window.location.search);
+    }
+
+    var listingCount = 1;
+    var neighborhood = 'backbay';
+    var listingtype = 'forsale';
+
+
+    if($("#neighborhoods").val() !== "backbay") {
+      window.neighborhoodCode = $("#neighborhoods").val();
+    }
+      
+    if(window.queryKeys.neighborhoods) {
+      window.queryKeys.neighborhood = window.queryKeys.neighborhoods;
+    }
+
+    if(window.queryKeys.neighborhood) {
+      $("#neighborhoods").val(window.queryKeys.neighborhood);
+    } else {
+      //neighborhood = 'backbay'
+      //window.queryKeys.neighborhood = neighborhood;
+      //$("#neighborhoods").val('Back Bay');
+    } 
+
+    if(window.queryKeys.listingtype) {
+      $("#listingtype").val(window.queryKeys.listingtype);
+    }
+}, 1000);
+
+setTimeout(function(){
+    if(window.queryParameters) {
+      window.queryKeys = simpleQueryString.parse(window.queryParameters);
+    } else {
+      window.queryKeys = simpleQueryString.parse(window.location.search);
+    }
+
+    var listingCount = 1;
+    var neighborhood = 'backbay';
+    var listingtype = 'forsale';
+
+
+    if($("#neighborhoods").val() !== "backbay") {
+      window.neighborhoodCode = $("#neighborhoods").val();
+    }
+      
+    if(window.queryKeys.neighborhoods) {
+      window.queryKeys.neighborhood = window.queryKeys.neighborhoods;
+    }
+
+    if(window.queryKeys.neighborhood) {
+      $("#neighborhoods").val(window.queryKeys.neighborhood);
+    } else {
+      //neighborhood = 'backbay'
+      //window.queryKeys.neighborhood = neighborhood;
+      //$("#neighborhoods").val('Back Bay');
+    } 
+
+    if(window.queryKeys.listingtype) {
+      $("#listingtype").val(window.queryKeys.listingtype);
+    }
+}, 1500);
+
+      setTimeout(function(){
+        if(!window.hood) {
+          return;
+        }
+
+        $("#neighborhoods").val(window.hood);
+        
+        if(window.proptype === "RN") {
+          $("#listingtype").val("lease")        
+        } else if(window.proptype === "CI") {
+          $("#listingtype").val("commercial")
+        } else if(window.proptype === "CC") {
+          $("#listingtype").val("forsale")
+        } else if(window.proptype === "SF") {
+          $("#listingtype").val("singlefamily")
+        } else if(window.proptype === "MF") {
+          $("#listingtype").val("multifamily")
+        }
+
+      },500);
+
+  window.mlsIDToGallerIndexDictionary = {};
+  window.mlsIDToGallerIndexDictionary["key"] = "value";
+
+  window.generateImageStringUrl = function(index, id) {
+    var baseUrl = "https://h3n.mlspin.com/photo/photo.aspx?nopadding=1&h=768&w=1024&mls=" + id;
+    var baseUrlEnd = "&o=&n=" + index;
+    var newImageUrl = baseUrl + baseUrlEnd;
+    return newImageUrl;
+  }
+
+  window.prev = function(id, index, count) {
+    var left = index - 1;
+    var right = index + 1;
+
+    // need to do some math with index and count
+    if(index === -1) {
+      index = count - 1;
+    }
+
+    console.log(id);
+    console.log(index);
+
+    var newString = window.generateImageStringUrl(index, id);
+    var domString = "<div class='fade'><div class='text'><span class='count 0'>" + (index + 1) + "</span> / " + count + "</div><img style='width: 100%;' src='" + newString + "'/></div>";
+
+    domString = domString + 
+      "<a class='prev' onclick='prev(" + id + ", " + (index - 1) + "," + count + ")''>&#10094;</a>" +
+      "<a class='next' onclick='next(" + id + ", " + (index + 1) + "," + count + ")''>&#10095;</a>";
+
+    $("#" + id + " .slideshow-container").html(domString);
+  }
+
+  window.next = function(id, index, count) {
+    // need to do some math with index and count
+    if(index === (count) || index === 0) {
+      index = 0
+    }
+
+    console.log(id);
+    console.log(index);
+
+    var newString = window.generateImageStringUrl(index, id);
+    var domString = "<div class='fade'><div class='text'><span class='count 0'>" + (index + 1) + "</span> / " + count + "</div><img style='width: 100%;' src='" + newString + "'/></div>";
+
+    domString = domString + 
+      "<a class='prev' onclick='prev(" + id + ", " + (index - 1) + "," + count + ")''>&#10094;</a>" +
+      "<a class='next' onclick='next(" + id + ", " + (index + 1) + "," + count + ")''>&#10095;</a>";
+
+    $("#" + id + " .slideshow-container").html(domString);
+  }
+</script>
+
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin+Slab|Merriweather" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <meta charset="utf-8">
+
+  <style>
+* {box-sizing:border-box}
+
+
+.active {
+  margin-bottom: -5px;
+}
+
+/* Slideshow container */
+
+.prev {
+  left: 2px;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.show {
+  display: block !important;
+}
+
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+/*  background-color: rgba(0,0,0,0.8); */
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.expand-banner {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor:pointer;
+}
+
+.expand-banner:hover {
+    background-color: #4c6481 !important;
+    color: white !important;
+}
+
+.expanded {
+  display: none;
+}
+
+.subscribe:hover {
+  background-color: #1F7F91 !important;
+  color: white !important;
+}
+
+.map:hover {
+  background-color: #11ae98 !important;
+  color: white !important;
+}
+
+.agent:hover {
+  border: 1px solid #142932 !important;
+  background-color: white !important;
+  color: #142932 !important;
+}
+
+.offer:hover {
+  border: 1px solid #1F7F91 !important;
+  background-color: white !important;
+  color: #1F7F91 !important;
+}
+
+.item p {
+    font-size: 14px;
+}
+
+p {
+  display: inline;
+  overflow: auto !important;
+  text-overflow: initial !important;
+  white-space: initial !important;
+}
+
+  
+.fade {
+  margin-bottom: -5px;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+* {box-sizing:border-box}
+
+
+.active {
+  margin-bottom: -5px;
+}
+
+/* Slideshow container */
+
+.prev {
+  left: 2px;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.show {
+  display: block !important;
+}
+
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+  
+  @media only screen and (min-width: 600px) {
+  .contracted {
+    display: none !important;
+  }
+}
+
+/* Base */
+/* Mixins */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/* Color variables */
+/* Text Colors */
+.a-white {
+  color: #ffffff;
+}
+.a-grey {
+  color: #dddddd;
+}
+.a-black {
+  color: #333333;
+}
+.a-red {
+  color: #f75353;
+}
+.a-green {
+  color: #51d466;
+}
+.a-lblue {
+  color: #32c8de;
+}
+.a-blue {
+  color: #609cec;
+}
+.a-orange {
+  color: #f78153;
+}
+.a-yellow {
+  color: #fcd419;
+}
+.a-violet {
+  color: #cb79e6;
+}
+.a-rose {
+  color: #ff61e7;
+}
+.a-brown {
+  color: #d08166;
+}
+/* Background Colors */
+.a-bg-white {
+  background-color: #ffffff;
+}
+.a-bg-grey {
+  background-color: #dddddd;
+}
+.a-bg-black {
+  background-color: #333333;
+}
+.a-bg-red {
+  background-color: #f75353;
+}
+.a-bg-green {
+  background-color: #51d466;
+}
+.a-bg-lblue {
+  background-color: #32c8de;
+}
+.a-bg-blue {
+  background-color: #609cec;
+}
+.a-bg-orange {
+  background-color: #f78153;
+}
+.a-bg-yellow {
+  background-color: #fcd419;
+}
+.a-bg-violet {
+  background-color: #cb79e6;
+}
+.a-bg-rose {
+  background-color: #ff61e7;
+}
+.a-bg-brown {
+  background-color: #d08166;
+}
+/* Gradient backgrounds */
+.a-grad-1 {
+  background: #ea3a04;
+  background: -moz-linear-gradient(top, #ea3a04 0%, #b9bc00 100%);
+  background: -webkit-linear-gradient(top, #ea3a04 0%, #b9bc00 100%);
+  background: linear-gradient(to bottom, #ea3a04 0%, #b9bc00 100%);
+}
+.a-grad-2 {
+  background: #b4e391;
+  background: -moz-linear-gradient(top, #b4e391 0%, #61c419 0%, #94e8b4 100%);
+  background: -webkit-linear-gradient(top, #b4e391 0%, #61c419 0%, #94e8b4 100%);
+  background: linear-gradient(to bottom, #b4e391 0%, #61c419 0%, #94e8b4 100%);
+}
+.a-grad-3 {
+  background: #00967f;
+  background: -moz-linear-gradient(top, #00967f 0%, #a8009d 100%);
+  background: -webkit-linear-gradient(top, #00967f 0%, #a8009d 100%);
+  background: linear-gradient(to bottom, #00967f 0%, #a8009d 100%);
+}
+.a-grad-4 {
+  background: #b4bc1e;
+  background: -moz-linear-gradient(top, #b4bc1e 0%, #d622a0 100%);
+  background: -webkit-linear-gradient(top, #b4bc1e 0%, #d622a0 100%);
+  background: linear-gradient(to bottom, #b4bc1e 0%, #d622a0 100%);
+}
+.a-grad-5 {
+  background: #4815c6;
+  background: -moz-linear-gradient(top, #4815c6 0%, #ff5c5c 100%);
+  background: -webkit-linear-gradient(top, #4815c6 0%, #ff5c5c 100%);
+  background: linear-gradient(to bottom, #4815c6 0%, #ff5c5c 100%);
+}
+.a-grad-6 {
+  background: #25aa87;
+  background: -moz-linear-gradient(top, #25aa87 0%, #ed9017 100%);
+  background: -webkit-linear-gradient(top, #25aa87 0%, #ed9017 100%);
+  background: linear-gradient(to bottom, #25aa87 0%, #ed9017 100%);
+}
+.a-grad-7 {
+  background: #4eaf33;
+  background: -moz-linear-gradient(top, #4eaf33 0%, #e2e276 100%);
+  background: -webkit-linear-gradient(top, #4eaf33 0%, #e2e276 100%);
+  background: linear-gradient(to bottom, #4eaf33 0%, #e2e276 100%);
+}
+.a-grad-8 {
+  background: #5ab721;
+  background: -moz-linear-gradient(top, #5ab721 0%, #ff670f 100%);
+  background: -webkit-linear-gradient(top, #5ab721 0%, #ff670f 100%);
+  background: linear-gradient(to bottom, #5ab721 0%, #ff670f 100%);
+}
+.a-grad-9 {
+  background: #53ba41;
+  background: -moz-linear-gradient(top, #53ba41 0%, #6d88b7 100%);
+  background: -webkit-linear-gradient(top, #53ba41 0%, #6d88b7 100%);
+  background: linear-gradient(to bottom, #53ba41 0%, #6d88b7 100%);
+}
+.a-grad-10 {
+  background: #ed1e36;
+  background: -moz-linear-gradient(top, #ed1e36 0%, #319b55 100%);
+  background: -webkit-linear-gradient(top, #ed1e36 0%, #319b55 100%);
+  background: linear-gradient(to bottom, #ed1e36 0%, #319b55 100%);
+}
+/* Blockquote */
+blockquote {
+  margin: 10px 0px;
+  background: #fff;
+}
+blockquote:before,
+blockquote:after {
+  content: " ";
+  display: table;
+}
+blockquote:after {
+  clear: both;
+}
+blockquote span {
+  float: left;
+  font-family: Georgia, 'Times New Roman', serif;
+  width: 60px;
+  display: inline-block;
+  line-height: 90px;
+  font-size: 95px;
+  text-align: center;
+  color: #333333;
+}
+blockquote p {
+  margin-bottom: 10px;
+  font-size: 17px;
+  line-height: 34px;
+  color: #333333;
+  margin-left: 65px;
+}
+blockquote small {
+  margin-left: 65px;
+  font-size: 14px;
+  line-height: 28px;
+  color: #777;
+  font-style: italic;
+}
+/* Labels */
+.a-label {
+  padding: 3px 7px;
+  border-radius: 3px;
+  margin: 3px 1px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.125);
+  /* Icon Label */
+}
+.a-label.a-label-icon {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  padding: 0px;
+}
+.a-label.a-label-white {
+  background: #ffffff;
+  color: #333333;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.075);
+}
+.a-label.a-label-grey {
+  background: #dddddd;
+  color: #333333;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.075);
+}
+.a-label.a-label-black {
+  background: #333333;
+  color: #ffffff;
+}
+.a-label.a-label-red {
+  background: #f75353;
+  color: #ffffff;
+}
+.a-label.a-label-green {
+  background: #51d466;
+  color: #ffffff;
+}
+.a-label.a-label-lblue {
+  background: #32c8de;
+  color: #ffffff;
+}
+.a-label.a-label-blue {
+  background: #609cec;
+  color: #ffffff;
+}
+.a-label.a-label-orange {
+  background: #f78153;
+  color: #ffffff;
+}
+.a-label.a-label-yellow {
+  background: #fcd419;
+  color: #ffffff;
+}
+.a-label.a-label-violet {
+  background: #cb79e6;
+  color: #ffffff;
+}
+.a-label.a-label-rose {
+  background: #ff61e7;
+  color: #ffffff;
+}
+.a-label.a-label-brown {
+  background: #d08166;
+  color: #ffffff;
+}
+/* Button Colors */
+.a-btn {
+  display: inline-block;
+  padding: 9px 12px;
+  font-size: 14px;
+  line-height: 14px;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #333333;
+  cursor: pointer;
+  border: 0px;
+  margin: 3px 1px;
+  transition: 0.5s;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.125);
+  /* Button small */
+  /* Button large */
+  /* Icon button */
+}
+.a-btn:hover,
+.a-btn:focus {
+  background: #f2f2f2;
+  color: #333333;
+  text-decoration: none;
+}
+.a-btn.a-btn-sm {
+  padding: 5px 7px;
+  border-radius: 2px;
+  font-size: 12px;
+  line-height: 12px;
+}
+.a-btn.a-btn-lg {
+  padding: 13px 18px;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 16px;
+}
+.a-btn.a-btn-icon {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  line-height: 33px;
+  text-align: center;
+  padding: 0px;
+}
+.a-btn.a-btn-white {
+  background: #ffffff;
+  color: #333333;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.075);
+}
+.a-btn.a-btn-white:hover,
+.a-btn.a-btn-white:focus {
+  background: #f2f2f2;
+  color: #333333;
+}
+.a-btn.a-btn-grey {
+  background: #dddddd;
+  color: #333333;
+  border: 1px solid #c4c4c4;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.075);
+}
+.a-btn.a-btn-grey:hover,
+.a-btn.a-btn-grey:focus {
+  background: #c4c4c4;
+  color: #333333;
+}
+.a-btn.a-btn-black {
+  background: #333333;
+  color: #ffffff;
+}
+.a-btn.a-btn-black:hover,
+.a-btn.a-btn-black:focus {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+.a-btn.a-btn-red {
+  background: #f75353;
+  color: #ffffff;
+}
+.a-btn.a-btn-red:hover,
+.a-btn.a-btn-red:focus {
+  background: #f52222;
+  color: #ffffff;
+}
+.a-btn.a-btn-green {
+  background: #51d466;
+  color: #ffffff;
+}
+.a-btn.a-btn-green:hover,
+.a-btn.a-btn-green:focus {
+  background: #30c247;
+  color: #ffffff;
+}
+.a-btn.a-btn-lblue {
+  background: #32c8de;
+  color: #ffffff;
+}
+.a-btn.a-btn-lblue:hover,
+.a-btn.a-btn-lblue:focus {
+  background: #1faabe;
+  color: #ffffff;
+}
+.a-btn.a-btn-blue {
+  background: #609cec;
+  color: #ffffff;
+}
+.a-btn.a-btn-blue:hover,
+.a-btn.a-btn-blue:focus {
+  background: #3280e7;
+  color: #ffffff;
+}
+.a-btn.a-btn-orange {
+  background: #f78153;
+  color: #ffffff;
+}
+.a-btn.a-btn-orange:hover,
+.a-btn.a-btn-orange:focus {
+  background: #f55d22;
+  color: #ffffff;
+}
+.a-btn.a-btn-yellow {
+  background: #fcd419;
+  color: #ffffff;
+}
+.a-btn.a-btn-yellow:hover,
+.a-btn.a-btn-yellow:focus {
+  background: #dfb803;
+  color: #ffffff;
+}
+.a-btn.a-btn-violet {
+  background: #cb79e6;
+  color: #ffffff;
+}
+.a-btn.a-btn-violet:hover,
+.a-btn.a-btn-violet:focus {
+  background: #ba4ede;
+  color: #ffffff;
+}
+.a-btn.a-btn-rose {
+  background: #ff61e7;
+  color: #ffffff;
+}
+.a-btn.a-btn-rose:hover,
+.a-btn.a-btn-rose:focus {
+  background: #ff2edf;
+  color: #ffffff;
+}
+.a-btn.a-btn-brown {
+  background: #d08166;
+  color: #ffffff;
+}
+.a-btn.a-btn-brown:hover,
+.a-btn.a-btn-brown:focus {
+  background: #c4613f;
+  color: #ffffff;
+}
+/* Border */
+.a-br {
+  border-width: 1px;
+  border-style: solid;
+  /* Border color */
+  /* Border size */
+  /* Border style */
+}
+.a-br.a-br-white {
+  border-color: #ffffff;
+}
+.a-br.a-br-grey {
+  border-color: #dddddd;
+}
+.a-br.a-br-black {
+  border-color: #333333;
+}
+.a-br.a-br-red {
+  border-color: #f75353;
+}
+.a-br.a-br-green {
+  border-color: #51d466;
+}
+.a-br.a-br-lblue {
+  border-color: #32c8de;
+}
+.a-br.a-br-blue {
+  border-color: #609cec;
+}
+.a-br.a-br-orange {
+  border-color: #f78153;
+}
+.a-br.a-br-yellow {
+  border-color: #fcd419;
+}
+.a-br.a-br-violet {
+  border-color: #cb79e6;
+}
+.a-br.a-br-rose {
+  border-color: #ff61e7;
+}
+.a-br.a-br-brown {
+  border-color: #d08166;
+}
+.a-br.a-br-2 {
+  border-width: 2px;
+}
+.a-br.a-br-4 {
+  border-width: 4px;
+}
+.a-br.a-br-6 {
+  border-width: 6px;
+}
+.a-br.a-br-10 {
+  border-width: 10px;
+}
+.a-br.a-br-15 {
+  border-width: 15px;
+}
+.a-br.a-br-dotted {
+  border-style: dotted;
+}
+.a-br.a-br-dashed {
+  border-style: dashed;
+}
+.a-br.a-br-double {
+  border-style: double;
+  border-width: 4px !important;
+}
+/* Social Media */
+.a-social {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  margin: 5px 2px;
+  text-align: center;
+  line-height: 31px;
+  color: #fff;
+  border-radius: 3px;
+  transition: 0.3s;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.a-social:hover,
+.a-social:focus {
+  color: #fff;
+}
+.a-social.a-social-trans {
+  background: transparent !important;
+  color: #333333;
+}
+.a-social.a-facebook {
+  border: 2px solid #609cec;
+  background: #609cec;
+}
+.a-social.a-facebook:hover,
+.a-social.a-facebook:focus {
+  border: 2px solid #3280e7;
+  background: #3280e7;
+}
+.a-social.a-twitter {
+  border: 2px solid #32c8de;
+  background: #32c8de;
+}
+.a-social.a-twitter:hover,
+.a-social.a-twitter:focus {
+  border: 2px solid #1faabe;
+  background: #1faabe;
+}
+.a-social.a-google-plus {
+  border: 2px solid #f75353;
+  background: #f75353;
+}
+.a-social.a-google-plus:hover,
+.a-social.a-google-plus:focus {
+  border: 2px solid #f52222;
+  background: #f52222;
+}
+.a-social.a-linkedin {
+  border: 2px solid #8eb8f1;
+  background: #8eb8f1;
+}
+.a-social.a-linkedin:hover,
+.a-social.a-linkedin:focus {
+  border: 2px solid #609cec;
+  background: #609cec;
+}
+.a-social.a-pinterest {
+  border: 2px solid #f52222;
+  background: #f52222;
+}
+.a-social.a-pinterest:hover,
+.a-social.a-pinterest:focus {
+  border: 2px solid #da0a0a;
+  background: #da0a0a;
+}
+/* Base */
+a {
+  outline: 0;
+}
+a:hover {
+  outline: 0;
+}
+a:focus {
+  text-decoration: none;
+  outline: 0;
+}
+input::-moz-focus-inner {
+  border: 0;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus *:focus {
+  outline: none;
+}
+
+.a-183 {
+  text-align: center;
+  margin: 5px 0px;
+}
+.a-183 h2 {
+  font-size: 5vw;
+  line-height: 1.2;
+  text-shadow: 0.03em 0.03em 1px rgba(0, 0, 0, 0.3);
+  margin: 12px 0px;
+  padding: 12px 0px;
+  font-weight: normal;
+  text-transform: uppercase;
+  border-top: 4px double #ccc;
+  border-bottom: 4px double #ccc;
+}
+@media (max-width: 1000px) {
+  .a-183 h2 {
+    font-size: 8vw;
+  }
+}
+@media (max-width: 600px) {
+  .a-183 h2 {
+    font-size: 10vw;
+  }
+}
+.a-183 h2 span {
+  color: #444;
+}
+.a-183 h2:before,
+.a-183 h2:after {
+  display: inline-block;
+  position: relative;
+  font-family: "FontAwesome";
+  font-size: 16px;
+  line-height: 1;
+  vertical-align: middle;
+  text-shadow: none;
+  top: -7px;
+}
+@media (max-width: 500px) {
+  .a-183 h2:before,
+  .a-183 h2:after {
+    top: 0;
+    font-size: 14px;
+  }
+}
+.a-183 h2:before {
+  left: -15px;
+}
+.a-183 h2:after {
+  right: -15px;
+}
+.a-183 h3 {
+  font-size: 14px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: #444;
+}
+
+  </style>
+
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCZyaOLvK1gfpvaeOUoHgCdjbFIaUt6pLc",
+    authDomain: "reroster-1dfc4.firebaseapp.com",
+    databaseURL: "https://reroster-1dfc4.firebaseio.com",
+    projectId: "reroster-1dfc4",
+    storageBucket: "reroster-1dfc4.appspot.com",
+    messagingSenderId: "497175382024"
+  };
+  firebase.initializeApp(config);
+
+
+  var secondaryAppConfig = {
+    apiKey: "AIzaSyAaXqZNIpzezivJ7wVB4KjkNOnIUn7zLPE",
+    authDomain: "bostonrealtor-356d1.firebaseapp.com",
+    databaseURL: "https://bostonrealtor-356d1.firebaseio.com",
+    projectId: "bostonrealtor-356d1",
+    storageBucket: "bostonrealtor-356d1.appspot.com",
+    messagingSenderId: "933969773055"
+  };
+
+  // Initialize another app with a different config
+  var secondary = firebase.initializeApp(secondaryAppConfig, "secondary");
+  </script>
+  <script src="https://raw.github.com/coolaj86/knuth-shuffle/master/index.js"></script>
+  <script>
+  var baseUrl = window.location.hostname;
+  function reloadHeaderText(baseUrl) {
+  // var isDowntownboston = baseUrl.indexOf("");
+  var isLocalHost = baseUrl.indexOf("localhost");
+  var isGreg = baseUrl.indexOf("ovation");
+  var isBackBay = baseUrl.indexOf("backbay");
+  var isSeaport = baseUrl.indexOf("seaport");
+  var isSouthboston = baseUrl.indexOf("southboston");
+  var isSouthie = baseUrl.indexOf("southie");
+  var isEastboston = baseUrl.indexOf("eastboston");
+  var isBeaconhill = baseUrl.indexOf("beaconhill");
+  var isCharlestown = baseUrl.indexOf("charlestown");
+  var isEastcambridge = baseUrl.indexOf("eastcambridge");
+  var isFenway = baseUrl.indexOf("fenway");
+  var isMalden = baseUrl.indexOf("malden");
+  var isNorthend = baseUrl.indexOf("northend");
+  var isSomerville = baseUrl.indexOf("somerville");
+  var isSouthend = baseUrl.indexOf("southend");
+  var isWestend = baseUrl.indexOf("westend");
+  var isAllston = baseUrl.indexOf("allston");
+  var isChestnuthill = baseUrl.indexOf("chestnuthill");;
+  var isDedham = baseUrl.indexOf("dedham"); 
+  var isJamaicaPlain = baseUrl.indexOf("jamaicaplain");;
+  var isNeedham = baseUrl.indexOf("needham");;
+  var isNewton = baseUrl.indexOf("newton");;
+  var isQuincy = baseUrl.indexOf("quincy");;
+  var isRevere = baseUrl.indexOf("revere");;
+
+  if(isGreg !== -1) {
+    isBackBay = 1;
+  }
+
+  if(isLocalHost !== -1 || isBackBay !== -1) {
+    window.neighborhoodCode = 'backbay';
+    window.neighborhoodText = 'Back Bay';
+    $(".city").text('Boston');
+  }
+  
+  if(isAllston !== -1) {
+    window.neighborhoodCode = 'allston';
+    window.neighborhoodText = 'Allston';
+    $(".city").text('Boston');
+  }
+
+  if(isChestnuthill !== -1) {
+    window.neighborhoodCode = 'chestnuthill';
+    window.neighborhoodText = 'Chestnut Hill';
+    $(".city").text('Chestnut Hill');
+  }
+
+  if(isDedham !== -1) {
+    window.neighborhoodCode = 'dedham';
+    window.neighborhoodText = 'Dedham';
+    $(".city").text('Dedham');
+  }
+
+  if(isJamaicaPlain !== -1) {
+    window.neighborhoodCode = 'jamaicaplain';
+    window.neighborhoodText = 'Jamaica Plain';
+    $(".city").text('Boston');
+  }
+
+  if(isNeedham !== -1) {
+    window.neighborhoodCode = 'needham';
+    window.neighborhoodText = 'Needham';
+    $(".city").text('Needham');
+  }
+
+  if(isNewton !== -1) {
+    window.neighborhoodCode = 'newton';
+    window.neighborhoodText = 'Newton';
+    $(".city").text('Newton');
+  }
+
+  if(isQuincy !== -1) {
+    window.neighborhoodCode = 'quincy';
+    window.neighborhoodText = 'Quincy';
+    $(".city").text('Quincy');
+  }
+
+  if(isRevere !== -1) {
+    window.neighborhoodCode = 'revere';
+    window.neighborhoodText = 'Revere';
+    $(".city").text('Revere');
+  }
+
+  if(isSeaport !== -1) {
+    window.neighborhoodCode = 'seaport';
+    window.neighborhoodText = 'Sea Port';
+    $(".city").text('Boston');
+  }
+  if(isSouthboston !== -1) {
+    window.neighborhoodCode = 'southboston';
+    window.neighborhoodText = 'South Boston';
+    $(".city").text('Boston');
+  }
+  if(isSouthie !== -1) {
+    window.neighborhoodCode = 'southie';
+    window.neighborhoodText = 'Southie';
+    $(".city").text('Boston');
+  }
+  if(isEastboston !== -1) {
+    window.neighborhoodCode = 'eastboston';
+    window.neighborhoodText = 'East Boston';
+    $(".city").text('East Boston');
+  }
+  if(isBeaconhill !== -1) {
+    window.neighborhoodCode = 'beaconhill';
+    window.neighborhoodText = 'Beacon Hill';
+    $(".city").text('Boston');
+  }
+  if(isCharlestown !== -1) {
+    window.neighborhoodCode = 'charlestown';
+    window.neighborhoodText = 'Charlestown';
+    $(".city").text('Boston');
+  }
+  if(isEastcambridge !== -1) {
+    window.neighborhoodCode = 'eastcambridge';
+    window.neighborhoodText = 'East Cambridge';
+    $(".city").text('East Cambridge');
+  }
+  if(isFenway !== -1) {
+    window.neighborhoodCode = 'fenway';
+    window.neighborhoodText = 'Fenway';
+    $(".city").text('Boston');
+  }
+  if(isMalden !== -1) {
+    window.neighborhoodCode = 'malden';
+    window.neighborhoodText = 'Malden';
+    $(".city").text('Malden');
+  }
+  if(isNorthend !== -1) {
+    window.neighborhoodCode = 'northend';
+    window.neighborhoodText = 'North End';
+    $(".city").text('Boston');
+  }
+  if(isSomerville !== -1) {
+    window.neighborhoodCode = 'somerville';
+    window.neighborhoodText = 'Somerville';
+    $(".city").text('Somerville');
+  }
+  if(isSouthend !== -1) {
+    window.neighborhoodCode = 'southend';
+    window.neighborhoodText = 'South End';
+    $(".city").text('Boston');
+  }
+  if(isWestend !== -1) {
+    window.neighborhoodCode = 'westend';
+    window.neighborhoodText = 'West End';
+    $(".city").text('Boston');
+  }
+
+  var isChinatown = baseUrl.indexOf("chinatown");;
+
+  if(isChinatown !== -1) {
+    window.neighborhoodCode = 'chinatown';
+    window.neighborhoodText = 'Chinatown';
+    $(".city").text('Boston');
+  }
+
+  var isDowntownboston = baseUrl.indexOf("downtownboston");;
+
+  if(isDowntownboston !== -1) {
+    window.neighborhoodCode = 'downtownboston';
+    window.neighborhoodText = 'Downtown Boston';
+    $(".city").text('Boston');
+  }
+
+  var isDorchester = baseUrl.indexOf("dorchester");;
+
+  if(isDorchester !== -1) {
+    window.neighborhoodCode = 'dorchester';
+    window.neighborhoodText = 'Dorchester';
+    $(".city").text('Boston');
+  }
+
+  var isFinancialDistrict = baseUrl.indexOf("financialdistrict");;
+
+  if(isFinancialDistrict !== -1) {
+    window.neighborhoodCode = 'financialdistrict';
+    window.neighborhoodText = 'Financial District';
+    $(".city").text('Boston');
+  }
+
+  var isHydePark = baseUrl.indexOf("hydepark");;
+
+  if(isHydePark !== -1) {
+    window.neighborhoodCode = 'hydepark';
+    window.neighborhoodText = 'Hyde Park';
+    $(".city").text('Boston');
+  }
+
+  var isKenmore = baseUrl.indexOf("kenmore");;
+
+  if(isKenmore !== -1) {
+    window.neighborhoodCode = 'kenmore';
+    window.neighborhoodText = 'Kenmore';
+    $(".city").text('Boston');
+  }
+
+  var isMissionHill = baseUrl.indexOf("missionhill");;
+
+  if(isMissionHill !== -1) {
+    window.neighborhoodCode = 'missionhill';
+    window.neighborhoodText = 'Mission Hill';
+    $(".city").text('Boston');
+  }
+
+  var isRoslindale = baseUrl.indexOf("roslindale");;
+
+  if(isRoslindale !== -1) {
+    window.neighborhoodCode = 'roslindale';
+    window.neighborhoodText = 'Roslindale';
+    $(".city").text('Boston');
+  }
+
+  var isRoxbury = baseUrl.indexOf("roxbury");;
+
+  if(isRoxbury !== -1) {
+    window.neighborhoodCode = 'roxbury';
+    window.neighborhoodText = 'Roxbury';
+    $(".city").text('Boston');
+  }
+
+  var isSeaport = baseUrl.indexOf("seaport");;
+
+  if(isSeaport !== -1) {
+    window.neighborhoodCode = 'seaport';
+    window.neighborhoodText = 'Seaport';
+    $(".city").text('Boston');
+  }
+
+  var isWestRoxbury = baseUrl.indexOf("westroxbury");;
+
+  if(isWestRoxbury !== -1) {
+    window.neighborhoodCode = 'westroxbury';
+    window.neighborhoodText = 'West Roxbury';
+    $(".city").text('Boston');
+  }
+
+  var isBrookline = baseUrl.indexOf("brookline");
+
+  if(isBrookline !== -1) {
+    window.neighborhoodCode = 'brookline';
+    window.neighborhoodText = 'Brookline';
+    $(".city").text('Boston');
+  }
+
+  var isCambridge = baseUrl.indexOf("cambridge");
+
+  if(isCambridge !== -1) {
+    window.neighborhoodCode = 'cambridge';
+    window.neighborhoodText = 'Cambridge';
+    $(".city").text('Cambridge');
+  }
+
+  var isDedham = baseUrl.indexOf("dedham");
+
+  if(isDedham !== -1) {
+    window.neighborhoodCode = 'dedham';
+    window.neighborhoodText = 'Dedham';
+    $(".city").text('Dedham');
+  }
+
+  var isLexington = baseUrl.indexOf("lexington");
+
+  if(isLexington !== -1) {
+    window.neighborhoodCode = 'lexington';
+    window.neighborhoodText = 'Lexington';
+    $(".city").text('Lexington');
+  }
+
+  var isMarblehead = baseUrl.indexOf("marblehead");
+
+  if(isMarblehead !== -1) {
+    window.neighborhoodCode = 'marblehead';
+    window.neighborhoodText = 'Marblehead';
+    $(".city").text('Marblehead');
+  }
+
+  var isNatick = baseUrl.indexOf("natick");
+
+  if(isNatick !== -1) {
+    window.neighborhoodCode = 'natick';
+    window.neighborhoodText = 'Natick';
+    $(".city").text('Natick');
+  }
+
+  var isNeedham = baseUrl.indexOf("needham");
+
+  if(isNeedham !== -1) {
+    window.neighborhoodCode = 'needham';
+    window.neighborhoodText = 'Needham';
+    $(".city").text('Needham');
+  }
+
+  var isWaltham = baseUrl.indexOf("waltham");
+
+  if(isWaltham !== -1) {
+    window.neighborhoodCode = 'waltham';
+    window.neighborhoodText = 'Waltham';
+    $(".city").text('Waltham');
+  }
+
+  var isWatertown = baseUrl.indexOf("watertown");
+
+  if(isWatertown !== -1) {
+    window.neighborhoodCode = 'watertown';
+    window.neighborhoodText = 'Watertown';
+    $(".city").text('Watertown');
+  }
+
+  var isWellesley = baseUrl.indexOf("wellesley");
+
+  if(isWellesley !== -1) {
+    window.neighborhoodCode = 'wellesley';
+    window.neighborhoodText = 'Wellesley';
+    $(".city").text('Wellesley');
+  }
+
+  var isWeston = baseUrl.indexOf("weston");
+
+  if(isWeston !== -1) {
+    window.neighborhoodCode = 'weston';
+    window.neighborhoodText = 'Weston';
+    $(".city").text('Weston');
+  }
+
+  var isWinthrop = baseUrl.indexOf("winthrop");
+
+  if(isWinthrop !== -1) {
+    window.neighborhoodCode = 'winthrop';
+    window.neighborhoodText = 'Winthrop';
+    $(".city").text('Winthrop');
+  }
+
+  $("#header-text").text(window.neighborhoodText);
+  
+  document.title = 'Ovation Properties' // window.neighborhoodText + ' Rentals';
+  }
+  reloadHeaderText(baseUrl);
+  </script>
+
+    <title></title>
+    <base href="/">
+    <script type="text/javascript">
+  /*jshint -W054 */
+(function (exports) {
+  'use strict';
+
+  // http://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+  function shuffle(array) {
+    var currentIndex = array.length
+      , temporaryValue
+      , randomIndex
+      ;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+  }
+
+  exports.knuthShuffle = shuffle;
+}('undefined' !== typeof exports && exports || 'undefined' !== typeof window && window || global));
+
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="title" content="" + window.neighborhoodText + "Apartment Rentals"/>
+    <meta name="description" content="Mobile friendly site. Listings are accurate and up to date"/>
+
+    <link rel="shortcut icon" href="about:blank">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionic/1.3.2/css/ionic.min.css"/>
+    <link rel="stylesheet" href="assets/index.css"/>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.4/css/lightgallery.min.css"/>
+    <link rel="stylsheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.4/js/lightgallery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+      (function(){
+         emailjs.init("user_YYbj0ZIkx65GItE9KnhGY");
+      })();
+  </script>
+    <script src="//cdn.iframe.ly/embed.js?api_key=c62daaee3cee49b33312ff" charset="utf-8" async></script>
+
+  <style>
+  body {
+    -webkit-overflow-scrolling: touch !important; /* Lets it scroll lazy */   
+  }
+  </style>
+</head>
+<body id="body">
+
+<!--
+  <div class="modal">
+    <p>Easy to use Mobile friendly site.</p> 
+    <p>Listings are accurate and up to date</p>
+  </div>
+
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Thank you for your interest!</p>
+      <p>We will follow up shortly</p>
+      <p>Feel free to continue browsing</p>
+    </div>
+  
+  </div>
+-->
+  <script type="text/javascript">
+  //$(body).css({"background-color":"#efefef"});
+  </script>
+
+
+
+
+
+
+<div style="height: 100%; overflow-y: scroll;">
+  <br/>
+  <div style="
+    padding-bottom: 0px !important;
+      padding-top: 10px !important;
+      margin-bottom: 0px;padding-top: 0px !important;" class="a-183 content">
+    <!--<h2><span><span id="header-text"></span>Rentals</span></h2>-->
+    <h2>Ovation Properties</h2>
+    <h3 class="neighborhoodHeaderText" style="color: #3e3e3e;margin-bottom: 5px; font-size: 30px;"><span id="header-text"></span></h3>
+  </div>
+  <style type="text/css">
+@media (min-width: 750px) {
+  .filter-label {
+    text-transform: uppercase;
+    font-family: unset;;
+    font-size: 24px;
+    padding-bottom: 15px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+  }
+  .custom-select {
+    display: flex;
+    flex-flow: column;
+  }
+}
+
+@media (min-width: 600px) {
+    .neighborhoodHeaderText {
+      display: none;
+    }
+    .filter-container {
+      width: 181px;
+      justify-content: center;
+      display: flex;
+      width: auto !important;
+    }
+    .callnow {
+      visibility: hidden;
+    }
+    .custom-select {
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    .custom-select select {
+      text-transform: uppercase;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    #nolistings {
+      display: none;
+    }
+}
+  </style>
+   <!-- <app-back-button></app-back-button> -->
+           <div class="filter-container" style="margin: 0 auto; width: 300px; background-color: white;">
+                  <!--
+                  <div id='err' style="padding-top: 15px; ">
+                        <span style="color:red;">Invalid Filter, Showing all listings</span>
+                  </div>
+                  -->
+<style>
+#rooms {
+      padding: 6px !important;
+      float: right;
+      width: 120px;
+}
+
+#maximum {
+      width: 120px;
+      float: right;
+      padding: 6px !important;
+}
+
+#neighborhoods {
+      width: 120px;
+      float: right;
+      padding: 6px !important;
+}
+
+option {
+  text-align: center;
+}
+
+</style>
+
+
+                  <div class="custom-select" style="padding: 9px;">
+                        <span class="filter-label">Listing Type</span>
+                        <select id="listingtype" style="width: 120px; float: right; padding: 6px !important;">
+                              <option value="forsale">Condos</option>
+                              <option value="lease">Rentals</option>
+                              <option value="singlefamily">Single Family</option>
+                              <option value="multifamily">Multi Family</option>
+                              <option value="commercial">Commercial</option>
+                        </select>
+
+
+                  </div>
+
+                  <div class="custom-select" style="padding: 9px;">
+                        <span class="filter-label">Neighborhoods</span>
+                        <select id='neighborhoods'>
+<!--                              <option value="allston">Allston</option> -->
+                              <option value="backbay">Back Bay</option>
+                              <option value="beaconhill">Beacon Hill</option>
+                              <option value="brighton">Brighton</option>
+                              <option value="charlestown">Charlestown</option>
+                              <option value="chinatown">Chinatown</option>
+                              <option value="downtown">Downtown</option>
+                              <option value="dorchester">Dorchester</option>
+                              <option value="eastboston">East Boston</option>
+                              <option value="fenway">Fenway</option>
+                              <option value="financialdistrict">Financial District</option>
+                              <option value="hydepark">Hyde Park</option>
+                              <option value="jamaicaplain">Jamaica Plain</option>
+                              <option value="kenmore">Kenmore</option>
+                              <option value="missionhill">Mission Hill</option>
+                              <option value="northend">North End</option>
+                              <option value="roslindale">Roslindale</option>
+                              <option value="roxbury">Roxbury</option>
+                              <option value="seaport">Seaport</option>
+                              <option value="southboston">South Boston</option>
+                              <option value="southend">South End</option>
+                              <option value="westend">West End</option>
+                              <option value="westroxbury">West Roxbury</option>
+                              <option value="" disabled>Greater Boston Area</option>
+                              <option value="braintree">Braintree</option>
+                              <option value="brookline">Brookline</option>
+                              <option value="cambridge">Cambridge</option>
+                              <option value="canton">Canton</option>
+                              <option value="chelsea">Chelsea</option>
+                              <option value="cohasset">Cohasset</option>
+                              <option value="concord">Concord</option>
+                              <option value="dedham">Dedham</option>
+                              <option value="everett">Everett</option>
+                              <option value="hingham">Hingham</option>
+                              <option value="hull">Hull</option>
+                              <option value="lexington">Lexington</option>
+                              <option value="lincoln">Lincoln</option>
+                              <option value="marblehead">Marblehead</option>
+                              <option value="milton">Milton</option>
+                              <option value="natick">Natick</option>
+                              <option value="needham">Needham</option>
+                              <option value="newton">Newton</option>
+                              <option value="quincy">Quincy</option>
+                              <option value="revere">Revere</option>
+                              <option value="scituate">Scituate</option>
+                              <option value="somerville">Somerville</option>
+                              <option value="waltham">Waltham</option>
+                              <option value="watertown">Watertown</option>
+                              <option value="wayland">Wayland</option>
+                              <option value="wellesley">Wellesley</option>
+                              <option value="weston">Weston</option>
+                              <option value="westwood">Westwood</option>
+                              <option value="weymouth">Weymouth</option>
+                              <option value="winthrop">Winthrop</option>
+                        </select>
+                  </div>
+
+                  <div class="custom-select" style="padding: 9px;">
+                        <span class="filter-label">Bedrooms</span>
+                        <select id='rooms'>
+                              <option value="none">All</option>
+                              <option value="0">Studio</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                        </select>
+                  </div>
+                  <div class="custom-select" style="padding: 9px;">
+                        <span class="filter-label">Sort By Price</span>
+                        <select id='sort' style="width: 120px;padding: 6px !important; float: right;">
+                              <option value="highToLow">High to Low</option>
+                              <option value="lowToHigh">Low to High</option>
+                        </select>
+                  </div>
+                  <div class="custom-select" style="padding: 9px;">
+                        <span class="filter-label">Maximum Price</span>
+                        <select id='maximum'>
+                              <option value="none">No Limit</option>
+                              <option value="20000">$20,000</option>
+                              <option value="10000">$10,000</option>
+                              <option value="5000">$5,000</option>
+                              <option value="4500">$4,500</option>
+                              <option value="4000">$4,000</option>
+                              <option value="3500">$3,500</option>
+                              <option value="3000">$3,000</option>
+                              <option value="2500">$2,500</option>
+                              <option value="2000">$2,000</option>
+                        </select>
+                  </div>
+
+
+                  <div id="nolistings" class="" style="padding-top: 35px;padding-bottom: 10px; text-align: center;">
+                        <a class="callnow" style="    padding: 6.5px;
+    border: 1px solid #3e3e3e;
+    padding-left: 13px;
+    padding-bottom: 7.5px;
+    padding-right: 8px;font-weight: 700; letter-spacing: 0.3em; font-family: 'Lato'; color: #3e3e3e;font-size: 24px;text-transform: uppercase;" href="tel:+19145570460">Call Now</a>
+                  </div>
+            </div>
+
+      <br class="nolistingsbreak"/>
+
+<div style="background:#eee;justify-content: center; margin: 0 auto; width: 100%; display: flex; flex-wrap: wrap;">
+  <div style="max-width: 450px;">
+    <div class="multifamily">
+      <div class="list card" id="72247367">
+        <div class="item">
+    
+          <a style="cursor: pointer; font-family: 'Playfair Display', serif;font-size: 16px;">
+            <strong _ngcontent-c2="">776 Boylston Street<span style="">Unit # E9-A</span></strong>
+          </a>
+
+          <h2 style=";font-size: 14px; margin-bottom: 4px;"><span class="city">Boston</span>, MA 02116</h2>
+          <h2 style="font-size: 14px;"><strong>List Price: $13,500,000</strong></h2>
+    
+
+          <div>
+            <span class="bedroomCount roomCount" style="font-size: 14px;"> 3 Bedrooms | </span>
+            <span style="font-size: 14px;">3500 SF<sup>2</sup></span>
+          </div>
+        </div>
+
+      <div class="slideshow-container">
+        <a _ngcontent-c2="" class="prev">❮</a>
+        <a _ngcontent-c2="" class="next">❯</a>
+        <div class="fade">
+          <div class="text">
+            <span class="count 0">1</span> / 30
+          </div>
+          <img style="width: 100%;" src="https://h3n.mlspin.com/photo/photo.aspx?nopadding=1&amp;h=768&amp;w=1024&amp;mls=72247367&amp;o=&amp;n=0/">
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+
+  <div style="max-width: 450px;">
+    <div class="multifamily">
+      <div class="list card" id="72247367">
+        <div class="item">
+    
+          <a style="cursor: pointer; font-family: 'Playfair Display', serif;font-size: 16px;">
+            <strong _ngcontent-c2="">776 Boylston Street<span style="">Unit # E9-A</span></strong>
+          </a>
+
+          <h2 style=";font-size: 14px; margin-bottom: 4px;"><span class="city">Boston</span>, MA 02116</h2>
+          <h2 style="font-size: 14px;"><strong>List Price: $13,500,000</strong></h2>
+    
+
+          <div>
+            <span class="bedroomCount roomCount" style="font-size: 14px;"> 3 Bedrooms | </span>
+            <span style="font-size: 14px;">3500 SF<sup>2</sup></span>
+          </div>
+        </div>
+      <div class="slideshow-container">
+        <a _ngcontent-c2="" class="prev">❮</a>
+        <a _ngcontent-c2="" class="next">❯</a>
+        <div class="fade">
+          <div class="text">
+            <span class="count 0">1</span> / 30
+          </div>
+          <img style="width: 100%;" src="https://h3n.mlspin.com/photo/photo.aspx?nopadding=1&amp;h=768&amp;w=1024&amp;mls=72247367&amp;o=&amp;n=0/">
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+
+
+
+  <div style="max-width: 450px;">
+    <div class="multifamily">
+      <div class="list card" id="72247367">
+        <div class="item">
+    
+          <a style="cursor: pointer; font-family: 'Playfair Display', serif;font-size: 16px;">
+            <strong _ngcontent-c2="">776 Boylston Street<span style="">Unit # E9-A</span></strong>
+          </a>
+
+          <h2 style=";font-size: 14px; margin-bottom: 4px;"><span class="city">Boston</span>, MA 02116</h2>
+          <h2 style="font-size: 14px;"><strong>List Price: $13,500,000</strong></h2>
+    
+
+          <div>
+            <span class="bedroomCount roomCount" style="font-size: 14px;"> 3 Bedrooms | </span>
+            <span style="font-size: 14px;">3500 SF<sup>2</sup></span>
+          </div>
+        </div>
+
+      <div class="slideshow-container">
+        <a _ngcontent-c2="" class="prev">❮</a>
+        <a _ngcontent-c2="" class="next">❯</a>
+        <div class="fade">
+          <div class="text">
+            <span class="count 0">1</span> / 30
+          </div>
+          <img style="width: 100%;" src="https://h3n.mlspin.com/photo/photo.aspx?nopadding=1&amp;h=768&amp;w=1024&amp;mls=72247367&amp;o=&amp;n=0/">
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+
+
+  <div style="max-width: 450px;">
+    <div class="multifamily">
+      <div class="list card" id="72247367">
+        <div class="item">
+    
+          <a style="cursor: pointer; font-family: 'Playfair Display', serif;font-size: 16px;">
+            <strong _ngcontent-c2="">776 Boylston Street<span style="">Unit # E9-A</span></strong>
+          </a>
+
+          <h2 style=";font-size: 14px; margin-bottom: 4px;"><span class="city">Boston</span>, MA 02116</h2>
+          <h2 style="font-size: 14px;"><strong>List Price: $13,500,000</strong></h2>
+    
+
+          <div>
+            <span class="bedroomCount roomCount" style="font-size: 14px;"> 3 Bedrooms | </span>
+            <span style="font-size: 14px;">3500 SF<sup>2</sup></span>
+          </div>
+        </div>
+
+      <div class="slideshow-container">
+        <a _ngcontent-c2="" class="prev">❮</a>
+        <a _ngcontent-c2="" class="next">❯</a>
+        <div class="fade">
+          <div class="text">
+            <span class="count 0">1</span> / 30
+          </div>
+          <img style="width: 100%;" src="https://h3n.mlspin.com/photo/photo.aspx?nopadding=1&amp;h=768&amp;w=1024&amp;mls=72247367&amp;o=&amp;n=0/">
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+
+
+
+</div>
+</div>
+
+</body>
+</html>
